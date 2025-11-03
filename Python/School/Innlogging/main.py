@@ -1,3 +1,5 @@
+verified_users = [{"username":"admin", "passord":"123"}]
+
 def main():
     state = "start"
     while state != "quit":
@@ -15,16 +17,40 @@ def vis_startmeny():
 """)
     valg = input("Hva ønsker du og gjøre? ")
     if valg == "1":
-        print("Du er logget inn.")
+        innlogging_meny()
         return "innlogget"
     elif valg == "2":
-        print("Ny bruker registrert.")
+        registrer_bruker_meny()
         return "start"
     elif valg == "3":
         return "quit"
     else:
-        print("ugyldig svar, prøv igjen.")
+        print("Ugyldig svar, prøv igjen.")
         return "start"
+
+def registrer_bruker_meny():
+    print("\n=== Registrer bruker ===\n")
+    username = ""
+    while len(username) == 0:
+        username = input("Brukernavn: ")
+        for user in verified_users:
+            if user["username"] == username:
+                print("""\nBrukernavn allerede i bruk, bruk et annet.\n""")
+                username = ""
+    
+    while True:
+        password = input("Passord: ")
+        re_password = input("Reskriv passord: ")
+        if password == re_password:
+            new_user = {"username":username, "password":password}
+            verified_users.append(new_user)
+            print("\nNy bruker opprettet ...")
+            break
+        else:
+            print("""\nPassorende er ikke like.\n""")
+
+def innlogging_meny():
+    pass
 
 def vis_innlogget_meny():
     print("""
@@ -44,5 +70,7 @@ def vis_innlogget_meny():
     else:
         print("Ugyldig valg, prøv igjen.")
         return "innlogget"
+
+
 
 main()
