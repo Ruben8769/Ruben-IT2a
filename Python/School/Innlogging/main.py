@@ -1,14 +1,15 @@
+import time
 verified_users = [{"username":"admin", "password":"123"}]
 
 def main():
-    state = "start"
-    while state != "quit":
-        if state == "start":
-            state = vis_startmeny()
-        elif state == "innlogget":
-            state = vis_innlogget_meny()
+    current_state = "start"
+    while current_state != "quit":
+        if current_state == "start":
+            current_state = startmeny()
+        elif current_state == "innlogget":
+            current_state = hovedmeny()
 
-def vis_startmeny():
+def startmeny():
     print("""
 === STARTMENY ===
 1) Logg inn
@@ -24,42 +25,74 @@ def vis_startmeny():
         return "quit"
     else:
         print("Ugyldig svar, prøv igjen.")
-        return "start"
+        return("start")
 
 def registrer_bruker_meny():
     print("\n=== Registrer bruker ===\n")
+    # Username creation
     validusername = False
-    validpassword = False
+    username_taken = True
     while validusername == False:
         username = input("Brukernavn: ")
-        for user in verified_users:
-            if user["username"] == username:
-                print("\nBrukernavn allerede i bruk, bruk et annet.\n")
+        if len(verified_users) != 0:
+            for user in verified_users:
+                if user["username"] != username:
+                    username_taken = False
+                elif user["username"] == username:
+                    username_taken = True
+                    break
+            if username_taken:
+                print("Brukernavnet er tatt, velg et annet.")
             else:
+                username_taken = False
                 validusername = True
-                while validpassword == False:
-                    password = input("Passord: ")
-                    re_password = input("Reskriv passord: ")
-                    if password == re_password:
-                        new_user = {"username":username, "password":password}
-                        verified_users.append(new_user)
-                        print("\nNy bruker opprettet ...")
-                        validpassword = True
-                        return "innlogget"
-                    else:
-                        print("\nPassorende er ikke like.\n")
+        else:
+            username_taken = False
+            validusername = True
+    # Password creation
+    validpassword = False
+    while validpassword == False:
+        password = input("Passord: ")
+        re_password = input("Reskriv passord: ")
+        if password == re_password:
+            new_user = {"username":username, "password":password}
+            verified_users.append(new_user)
+            # Bruker login lasting
+            print("\nNy bruker opprettet.\nLogger bruker inn")
+            doth = "."
+            for x in range(3):
+                print(doth)
+                doth = doth + "."
+                time.sleep(.3)
+            validpassword = True
+            return "innlogget"
+        else:
+            print("\nPassorende er ikke like.\n")
 
 def innlogging_meny():
-    while True:
-        username = input("\nBrukernavn: ")
-        password = input("Passord: ")
-        for user in verified_users:
-            if user["username"] != username or user["password"] != password:
-                print("Feil brukernavn eller passord.\n")
-            else:
-                return "innlogget"
+    if len(verified_users) != 0:
+        print("\n=== Logg in ===\n")
+        loggin_state = True
+        while loggin_state:
+            username = input("Brukernavn: ")
+            password = input("Passord: ")
+            for user in verified_users:
+                if user["username"] == username and user["password"] == password:
+                    # Bruker login lasting
+                    print("\nLogger bruker inn")
+                    doth = "."
+                    for x in range(3):
+                        print(doth)
+                        doth = doth + "."
+                        time.sleep(.3)
+                    loggin_state = False
+                    return "innlogget"
+            print("Feil brukernavn eller passord.\n")
+    else:
+        print("\nNo users availible.")
+        return "start"
 
-def vis_innlogget_meny():
+def hovedmeny():
     print("""
 === MENY (innlogget) ===
 1) Fortell en random vits
