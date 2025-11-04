@@ -1,5 +1,5 @@
 import time
-verified_users = [{"username":"admin", "password":"123"}]
+import json
 
 def main():
     current_state = "start"
@@ -29,6 +29,9 @@ def startmeny():
 
 def registrer_bruker_meny():
     print("\n=== Registrer bruker ===\n")
+    # Importerer bruker data
+    with open("Python/School/Innlogging/brukere.json", "r") as u:
+        verified_users = json.load(u)
     # Username creation
     validusername = False
     username_taken = True
@@ -57,6 +60,8 @@ def registrer_bruker_meny():
         if password == re_password:
             new_user = {"username":username, "password":password}
             verified_users.append(new_user)
+            with open("Python/School/Innlogging/brukere.json", "w") as u:
+                json.dump(verified_users, u, indent=4)
             # Bruker login lasting
             print("\nNy bruker opprettet.\nLogger bruker inn")
             doth = "."
@@ -70,6 +75,11 @@ def registrer_bruker_meny():
             print("\nPassorende er ikke like.\n")
 
 def innlogging_meny():
+    print("\n=== Registrer bruker ===\n")
+    # Importerer bruker data
+    with open("Python/School/Innlogging/brukere.json", "r") as u:
+        verified_users = json.load(u)
+    # Reigstrerer bruker
     if len(verified_users) != 0:
         print("\n=== Logg in ===\n")
         loggin_state = True
