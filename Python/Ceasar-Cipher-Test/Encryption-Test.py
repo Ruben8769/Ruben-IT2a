@@ -1,6 +1,6 @@
 import json
 
-with open("Python/Test/Legal-ch.json", "r") as lch:
+with open("Python/Ceasar-Cipher-Test/Legal-ch.json", "r") as lch:
     legal_chs = json.load(lch)
 
 user_password = input("Password: ")
