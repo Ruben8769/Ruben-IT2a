@@ -71,7 +71,6 @@ def registrer_bruker_meny():
             print("\nPassorende er ikke like.\n")
 
 def innlogging_meny():
-    print("\n=== Registrer bruker ===\n")
     # Importerer bruker data
     with open("Python/School/Innlogging/brukere.json", "r") as u:
         verified_users = json.load(u)
