@@ -63,12 +63,8 @@ def registrer_bruker_meny():
             with open("Python/School/Innlogging/brukere.json", "w") as u:
                 json.dump(verified_users, u, indent=4)
             # Bruker login lasting
-            print("\nNy bruker opprettet.\nLogger bruker inn")
-            doth = "."
-            for x in range(3):
-                print(doth)
-                doth = doth + "."
-                time.sleep(.3)
+            print("\nNy bruker opprettet.")
+            loading()
             validpassword = True
             return "innlogget"
         else:
@@ -88,13 +84,7 @@ def innlogging_meny():
             password = input("Passord: ")
             for user in verified_users:
                 if user["username"] == username and user["password"] == password:
-                    # Bruker login lasting
-                    print("\nLogger bruker inn")
-                    doth = "."
-                    for x in range(3):
-                        print(doth)
-                        doth = doth + "."
-                        time.sleep(.3)
+                    loading()
                     loggin_state = False
                     return "innlogget"
             print("Feil brukernavn eller passord.\n")
@@ -120,5 +110,13 @@ def hovedmeny():
     else:
         print("Ugyldig valg, prøv igjen.")
         return "innlogget"
+
+def loading():
+    print("\nLogger bruker inn")
+    doth = "."
+    for x in range(3):
+        print(doth)
+        doth = doth + "."
+        time.sleep(.3)
 
 main()
