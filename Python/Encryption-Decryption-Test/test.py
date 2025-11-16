@@ -4,6 +4,7 @@ with open("Python/Encryption-Decryption-Test/Legal-ch.json", "r") as lch:
     legal_chs = json.load(lch)
 
 encryption_key = 5
+encryptet_passwords = ["FM^unW", "Wnu^MF"]
 user_password = list(input("Password: "))
 
 # Sjeker om passored bruker lovelig tegn
@@ -30,6 +31,12 @@ else:
         new_pos = (pos + encryption_key) % len(legal_chs)
         new_postion.append(new_pos)
         encryptet_chars.append(legal_chs[new_pos])
-    encryptet_passwords = "".join(encryptet_chars)
+    encryptet_password = "".join(encryptet_chars)
+
+print(f"""
+--- Encryptert ---
+{user_password}
+{encryptet_password}
+""")
 
 # Koden som decrypterer bruker passored

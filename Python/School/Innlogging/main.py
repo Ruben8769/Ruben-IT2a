@@ -1,6 +1,10 @@
 import time
 import json
 
+# Importerer bruker data
+with open("Python/School/Innlogging/brukere.json", "r") as u:
+    verified_users = json.load(u)
+
 def main():
     current_state = "start"
     while current_state != "quit":
@@ -29,9 +33,6 @@ def startmeny():
 
 def registrer_bruker_meny():
     print("\n=== Registrer bruker ===\n")
-    # Importerer bruker data
-    with open("Python/School/Innlogging/brukere.json", "r") as u:
-        verified_users = json.load(u)
     # Username creation
     validusername = False
     username_taken = True
@@ -71,9 +72,6 @@ def registrer_bruker_meny():
             print("\nPassorende er ikke like.\n")
 
 def innlogging_meny():
-    # Importerer bruker data
-    with open("Python/School/Innlogging/brukere.json", "r") as u:
-        verified_users = json.load(u)
     # Reigstrerer bruker
     if len(verified_users) != 0:
         print("\n=== Logg in ===\n")
