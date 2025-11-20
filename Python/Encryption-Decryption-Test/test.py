@@ -32,11 +32,6 @@ else:
         new_postion.append(new_pos)
         encryptet_chars.append(legal_chs[new_pos])
     encryptet_password = "".join(encryptet_chars)
-
-print(f"""
---- Encryptert ---
-{user_password}
-{encryptet_password}
-""")
+    print(f"""\n--- Encryptert ---\n{user_password}\n{encryptet_password}\n""")
 
 # Koden som decrypterer bruker passored

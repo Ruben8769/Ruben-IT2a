@@ -3,7 +3,7 @@ import json
 
 # Importerer bruker data
 with open("Python/School/Innlogging/brukere.json", "r") as u:
-    verified_users = json.load(u)
+    user_list = json.load(u)
 
 def main():
     current_state = "start"
@@ -38,8 +38,8 @@ def registrer_bruker_meny():
     username_taken = True
     while validusername == False:
         username = input("Brukernavn: ")
-        if len(verified_users) != 0:
-            for user in verified_users:
+        if len(user_list) != 0:
+            for user in user_list:
                 if user["username"] != username:
                     username_taken = False
                 elif user["username"] == username:
@@ -60,9 +60,9 @@ def registrer_bruker_meny():
         re_password = input("Reskriv passord: ")
         if password == re_password:
             new_user = {"username":username, "password":password}
-            verified_users.append(new_user)
+            user_list.append(new_user)
             with open("Python/School/Innlogging/brukere.json", "w") as u:
-                json.dump(verified_users, u, indent=4)
+                json.dump(user_list, u, indent=4)
             # Bruker login lasting
             print("\nNy bruker opprettet.")
             loading()
@@ -73,13 +73,13 @@ def registrer_bruker_meny():
 
 def innlogging_meny():
     # Reigstrerer bruker
-    if len(verified_users) != 0:
+    if len(user_list) != 0:
         print("\n=== Logg in ===\n")
         loggin_state = True
         while loggin_state:
             username = input("Brukernavn: ")
             password = input("Passord: ")
-            for user in verified_users:
+            for user in user_list:
                 if user["username"] == username and user["password"] == password:
                     loading()
                     loggin_state = False
@@ -92,16 +92,15 @@ def innlogging_meny():
 def hovedmeny():
     print("""
 === MENY (innlogget) ===
-1) Fortell en random vits
-2) Logg ut
+1) Logg ut
 3) Avslutt
 """)
     valg = input("Hva ønsker du å gjøre? ")
     if valg == "1":
-        return "innlogget"
-    elif valg == "2":
         print("Du er nå logget ut.")
         return "start"
+    elif valg == "2":
+        return "innlogget"
     elif valg == "3":
         return "quit"
     else:
