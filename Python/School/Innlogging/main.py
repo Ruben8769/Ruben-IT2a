@@ -99,8 +99,6 @@ def hovedmeny():
     if valg == "1":
         print("Du er nå logget ut.")
         return "start"
-    elif valg == "2":
-        return "innlogget"
     elif valg == "3":
         return "quit"
     else:
