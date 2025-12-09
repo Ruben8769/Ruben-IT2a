@@ -59,16 +59,13 @@ def innlogging_meny():
     while True:
         username = input("Brukernavn: ")
         password = input("Passord: ")
-        if len(username) and len(password):
-            if be.legal_str(password) and be.legal_str(username):
-                if be.matching_usr_psw(username, be.encryption(password)):
-                    print("Logger deg in")
-                    loading_animation(2)
-                    return "innlogget"
-                else:
-                    print("\nUgyldig brukernavn eller passord\n")
+        if be.legal_str(password) and be.legal_str(username):
+            if be.matching_usr_psw(username, be.encryption(password)):
+                print("Logger deg in")
+                loading_animation(2)
+                return "innlogget"
             else:
-                print("\nUgyldig brukernavn eller passord!\n")
+                print("\nUgyldig brukernavn eller passord\n")
         else:
             print("\nUgyldig brukernavn eller passord!\n")
 
