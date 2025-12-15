@@ -2,8 +2,6 @@
 import backend as be
 import time
 
-# Variabler
-
 # Funksjoner
 def main():
     """
