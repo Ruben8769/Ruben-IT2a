@@ -1,6 +1,7 @@
 import sqlite3
 
 conn = sqlite3.connect("Python/Encryption/database.db")
+conn.row_factory = sqlite3.Row
 cursor = conn.cursor()
 
 encryption_key = 15
