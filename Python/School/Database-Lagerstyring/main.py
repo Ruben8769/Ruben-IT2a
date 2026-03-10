@@ -2,62 +2,137 @@
 import uuid
 import firebase_admin
 from firebase_admin import credentials, firestore
+import datetime
 
+# Creating Variables
+current_user_id = None
+product_id = None
 
 # Connecting to Firebase
-cred = credentials.Certificate("Python/School/Database-Lagerstyring/firebase_key.json")
+cred = credentials.Certificate("Python/School/Database-Lagerstyring/firebase_nokel.json")
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
+# Making seperate variables for each collection
+lgs_user = db.collection("lagerstyring-ansatt").get()
+lgs_storage = db.collection("lagerstyring-lager").get()
 
-# Making seperate variables
-imp_users = db.collection("lager-brukere").get()
-imp_storage = db.collection("lager-lager").get()
-
+for l in lgs_storage:
+    d = l.to_dict()
+    print(l.id)
 
 # Creating functions
-def maching_username_password(username_in, password_in):
-    for user in imp_users:
-        user = user.to_dict()
-        if username_in == user["name"]:
-            if password_in == user["password"]:
-                return True
-            return False
-    else:
-        return False
-
-
-# Creating user functions
+# Main function to loop everything
 def main():
-    user_options = {"1": login}
-    while True:
-        # Getting user choice
-        print("\n--- Start Meny ---\n1) Logg inn\n9) Avslutt\n")
-        choice = input("Valg: ")
-
-        # Activating choosen option
-        if choice in user_options:
-            option = user_options[choice]
-            option()
-        elif choice == "9":
-            break
-        else:
-            print("\nUgyldig inntastet, prøv på nytt.")
+    """
+    Alle mulige tilstander
+    'start' = Startmeny
+    'innloget' = Bruker logget inn
+    'quit' = Avslutt programet
+    """
+    current_state = "start"
+    while current_state != "quit":
+        if current_state == "start":
+            current_state = start_menu()
+        elif current_state == "innlogget":
+            current_state = main_menu()
 
 
-def login():
-    print("\n--- Login Meny ---")
-    user_name = input("Username: ")
-    user_password = input("Password: ")
-    if maching_username_password(user_name, user_password):
-        print("\nMaching username and password")
-        main_menu()
+# Function for startmenu
+def start_menu():
+    print("\n--- Start Menu ---\n\n1. Logg inn\n9. Avslutt\n")
+    user_answer = input("Velg: ")
+    if user_answer == "1":
+        return login()
+    elif user_answer == "9":
+        return "quit"
     else:
-        print("\nWrong username or password")
+        print("Ugyldig inntastet, prøv på nytt.")
 
 
+# Function for login
+def login():
+    global current_user_id
+    print("\n--- Login ---\n")
+    user_name = input("Brukernavn: ")
+    user_password = input("Passord: ")
+    for user in lgs_user:
+        lgs_data = user.to_dict()
+        if lgs_data["navn"] == user_name and lgs_data["passord"] == user_password:
+            current_user_id = user.id # Lagrer ID for bruk til framtiden
+            return "innlogget"
+    else:
+        print("Ugyldig inntastet, prøv på nytt.")
+        return "start"
+
+
+# Function for main menu
 def main_menu():
-    print("\n--- Main Menu ---")
+    print("\n--- Main Menu ---\n\n  1. Se produkter\n  2. Modifiser til produkt\n  3. Logg-tabell\n")
+    user_answer = input("Velg: ")
+
+    if user_answer == "1":
+        return view_products(1, False)
+    elif user_answer == "2":
+        return change_product()
+    elif user_answer == "3":
+        return view_logg()
+    else: "Ugyldig inntasted, prøv på nytt"
+
+
+# Function for viewing products
+def view_products(mode, product_name):
+    global product_id
+
+    if mode == 1 or 2: print("\n--- Se Produkter ---")
+    for product in lgs_storage:
+        data = product.to_dict()
+
+        if mode == 1 or 2:
+            print(f"""
+  Vare:        {product.id}
+  Vare antall: {data["antall"]}
+  Vare nr:     {data["varenr"]}""")
+        elif mode == 3:
+
+            if product.id == product_name:
+                product_id = product.id
+                print(product.id, product_name)
+                break
+    else:
+        product_id = None
+        
+    """
+    Forskjelige modes
+    1 = Skal ta deg tilbake til hovedmenyen
+    2 = Skal ikke ta deg tilbake til hovedemyen
+    3 = Skal returnere produkt ID hvis den fins
+    """
+    if mode == 1:
+        return "innlogget"
+    elif mode == 2 or 3:
+        pass
+    else:
+        return ("innlogget")
+
+
+# Function for changing amount
+def change_product():
+    view_products(2, False)
+    print("\n--- Modifiser produkt ---\n\n  1. Rediger produkt\n")
+    user_answer = input("Velg: ")
+    if user_answer == "1":
+        user_product = input("\nHvilket produkt vi du endre: ")
+        view_products(3, user_product)
+        print(product_id)
+    else:
+        return "innlogget"
+    return "innlogget"
+
+
+# Function for viewing logg
+def view_logg():
+    return "innlogget"
 
 main()

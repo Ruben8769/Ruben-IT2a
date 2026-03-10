@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "kvn-elevbase-ruben",
+  "private_key_id": "45d2e6b083d8068ac50ac807a67011eea4abffeb",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCoLQEKFwLqvhUw\nwFTEUKkpEbouMIAX9N+Cl4gYiRWb7Nnk2LIY38bSM/nw1AGtHbPQWwta1Yt4ec1P\n0Jb76387yLwf3STurC8l+SzhI2I/XeZiLJqpkILjeOyoOY0nCCpFJwUWyFBK/YDo\nB7pH/+m3jR09QXp15n47plVTrGcQ+9SMByUV8s+qwtDmXkZFwkxrj/pGEmw3U/Qf\nGAsHHFNx7iZ7fAksR1aoGmTDkfjaVVSJF5IXlpbMEBtoW0eHTuPzrj3AcxV6QuQO\nwxB6YH75nCSrhdhrF7uadO+KanaU35kaGtbJxC+jmgy3LSAc0Z4wwh8OEeMhbEBG\nk99K3eLrAgMBAAECgf91rW5zKYTP8JifDOTMNYKxSz7IrOMXE4YfY8bXhmoyF5ro\n/pZLN+Q87d1/YpXJrzI0iCs2qHqaBdP5sC7lB0q8NUKhTYNoKXopsbpxaOqawdWV\nqX5LbKAp4Q1Rumsbwqvzc0k+dKgg4jD75xcLsOS3elwdgNX8uvbu6HTujz0G12Ka\niYSMf4/8MU7YOJoozS94ltACMh+yGsEm1oWabTqXQ6NUyZD2dWHz/Yq+7XAFa0X1\n+lMeWTHcXHVmQbBpgpBjvvfTA2oM04vhiAcJfqlCahPGc04ARZQew90/8zLz/8/j\nr8ZhElLaiSGTQnFFB4oM0OMkcWkL140rQILkjWECgYEA3mzlFkik8uK71eqJxq8k\nP8jWvAQ6fpr45L0G4bTvmWuEyRul2qp+H7IuvdfA7XpZxvZvvR+BTZbP2nECpjh4\n+94VhBUWqYtq5fa4bZK1gK8v7g8CZ5M2mVqkYgqf2pHA/2m24/KFqr/M6Hb5XElC\nsyoCTTAFybiaPU/hEgUGLRsCgYEAwY/DFk0LAw6wbyoLNrtjP8oDPx4zAtI9dBol\ncdxMsVR/ha5/DsHGPnh72wgb2575CUREh6jm0jK92CBW+qvrSCsRBVvt8cwCxn3H\nH3j51ayjFgrxjuBMD00jXiB/XmnTq3lGzFn9A7Xj1qKJrSg/u6g0576cgZs9lCUX\nfI9NjnECgYEAzMU19tj0OsPwp9Tf+LGfTrWos7m03H/x6iv4XO0FtJneyoMQowpZ\nSPbyv0YVUMxWQKz6XAPYN8VDIFjwVnUhNMfVyR7dGUPIK2SDkCUDwjAGkUTyMsa9\n+lsPgU9EsaWEJ+B8Rskss/EWRWHa2lJ7/JQNQGCYw4iXPyD+FWfYsscCgYEAiMc1\nHYItwOhVZwh3yiJavQ3cg3Ksq1azlGKRiUcabsj+IBIxuNTXaPes1heB0A0jgBfc\nsVx6V5kBrEMWE6b+6Q19xqKynwYCBA+HcUcEjKikygPLtKHtPXbOAkrGlooDyI03\nqVoBv+h9awOKdHEXsFzpncWFRNTVi+U2FpARRxECgYBLAL4GfyPqICl1mpXRC8dl\nOvIneeB/GnEQ6KYVCIMN4mmDO9IKqeRb6bqOo0qaUKJbCHoZT0t4i2uaNKawxW2e\nSQ5y5SvLA4w3Du/7fr5GDvZh1yUxjFB0YStSZ5TPUlK/fdNmfeMym9pG201rxQhU\nw7XZqEPcOauaYibJvFLAJQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@kvn-elevbase-ruben.iam.gserviceaccount.com",
+  "client_id": "101318553341283327677",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40kvn-elevbase-ruben.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
