@@ -24,9 +24,9 @@ try:
     print("Firebase store created")
 
     # Making seperate variables for each collection
-    lgs_user = list(db.collection("lagerstyring-ansatt").stream())
+    lgs_user = db.collection("lagerstyring-ansatt").get()
     print("User fetched")
-    lgs_storage = list(db.collection("lagerstyring-lager").stream())
+    lgs_storage = db.collection("lagerstyring-lager").get()
     print("Storage fetched")
 except Exception as e:
     print("Error", e)
@@ -68,7 +68,7 @@ def login():
     user_name = input("Brukernavn: ")
     user_password = input("Passord: ")
     for user in lgs_user:
-        lgs_data = user
+        lgs_data = user.to_dict()
         if lgs_data["navn"] == user_name and lgs_data["passord"] == user_password:
             current_user_id = user.id # Lagrer ID for bruk til framtiden
             return "innlogget"
@@ -97,7 +97,7 @@ def view_products(mode, product_name):
 
     if mode == 1 or 2: print("\n--- Se Produkter ---")
     for product in lgs_storage:
-        data = product
+        data = product.to_dict()
 
         if mode == 1 or 2:
             print(f"""
