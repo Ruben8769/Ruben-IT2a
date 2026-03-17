@@ -79,7 +79,7 @@ def login():
 
 # Function for main menu
 def main_menu():
-    print("\n--- Main Menu ---\n\n  1. Se produkter\n  2. Modifiser til produkt\n  3. Logg-tabell\n")
+    print("\n--- Main Menu ---\n\n  1. Se produkter\n  2. Modifiser  produkt\n  3. Logg-tabell\n")
     user_answer = input("Velg: ")
 
     if user_answer == "1":
@@ -95,22 +95,20 @@ def main_menu():
 def view_products(mode, product_name):
     global product_id
 
-    if mode == 1 or 2: print("\n--- Se Produkter ---")
-    for product in lgs_storage:
-        data = product.to_dict()
-
-        if mode == 1 or 2:
+    if mode == 1 or mode == 2: 
+        for product in lgs_storage:
+            print("\n--- Se Produkter ---")
+            data = product.to_dict()
             print(f"""
-  Vare:        {product.id}
-  Vare antall: {data["antall"]}
-  Vare nr:     {data["varenr"]}""")
-        elif mode == 3:
-
-            if product.id == product_name:
-                product_id = product.id
-                print(product.id, product_name)
-                break
+    Vare:        {product.id}
+    Vare antall: {data["antall"]}
+    Vare nr:     {data["varenr"]}""")
+    elif mode == 3:
+        for product in lgs_storage:
+            if product.id.lower() == product_name.lower():
+                product_id == product_name
     else:
+        print(product_name, product.id)
         product_id = None
         
     """
@@ -129,7 +127,7 @@ def view_products(mode, product_name):
 
 # Function for changing amount
 def change_product():
-    found_product = None
+    global product_id
     view_products(2, False)
     print("\n--- Modifiser produkt ---\n\n  1. Rediger produkt\n")
     user_answer = input("Velg: ")
@@ -138,10 +136,10 @@ def change_product():
         user_product = input("\nHvilket produkt vi du endre: ")
         found_product = view_products(3, user_product)
 
-        if found_product == None:
+        if product_id == None:
             print("Ingen produkt funnet.")
         else:
-            print("Produkt funnet", found_product, user_product)
+            print("Produkt funnet", product_id, user_product)
     else:
         pass
     #     return "innlogget"
