@@ -1,0 +1,6 @@
+navn
+kategori
+pris
+antallPaLager
+leverandor
+passerTil

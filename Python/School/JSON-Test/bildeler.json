@@ -1,0 +1,65 @@
+{
+  "verksted": "Bodo Bilservice",
+  "sistOppdatert": "2026-05-04",
+  "deler": [
+    {"id": 1, "navn": "Bremseklosser", "kategori": "Brems", "pris": 799, "antallPaLager": 15, "leverandor": "Bosch", "passerTil": ["Toyota Corolla 2015", "Toyota Corolla 2018"]},
+    {"id": 2, "navn": "Oljefilter", "kategori": "Motor", "pris": 149, "antallPaLager": 40, "leverandor": "Mann Filter", "passerTil": ["Volkswagen Golf 2016", "Audi A3 2017"]},
+    {"id": 3, "navn": "Luftfilter", "kategori": "Motor", "pris": 199, "antallPaLager": 25, "leverandor": "K&N", "passerTil": ["BMW 3-serie 2018", "BMW 3-serie 2020"]},
+    {"id": 4, "navn": "Startbatteri", "kategori": "Elektrisk", "pris": 1299, "antallPaLager": 10, "leverandor": "Varta", "passerTil": ["Tesla Model 3 2019", "Nissan Leaf 2018"]},
+    {"id": 5, "navn": "Tennplugger", "kategori": "Motor", "pris": 99, "antallPaLager": 60, "leverandor": "NGK", "passerTil": ["Ford Focus 2017", "Ford Focus 2019"]},
+
+    {"id": 6, "navn": "Bremseskiver", "kategori": "Brems", "pris": 1200, "antallPaLager": 12, "leverandor": "Bosch", "passerTil": ["Toyota Corolla 2015", "Toyota Avensis 2017"]},
+    {"id": 7, "navn": "Clutchsett", "kategori": "Drivverk", "pris": 3500, "antallPaLager": 5, "leverandor": "Sachs", "passerTil": ["Volkswagen Passat 2016"]},
+    {"id": 8, "navn": "Registerreim", "kategori": "Motor", "pris": 899, "antallPaLager": 8, "leverandor": "Gates", "passerTil": ["Audi A4 2015"]},
+    {"id": 9, "navn": "Drivstoffilter", "kategori": "Motor", "pris": 299, "antallPaLager": 20, "leverandor": "Bosch", "passerTil": ["Ford Mondeo 2018"]},
+    {"id": 10, "navn": "Radiator", "kategori": "Kjøling", "pris": 2200, "antallPaLager": 6, "leverandor": "Valeo", "passerTil": ["BMW 5-serie 2017"]},
+
+    {"id": 11, "navn": "Termostat", "kategori": "Kjøling", "pris": 450, "antallPaLager": 18, "leverandor": "Mahle", "passerTil": ["Audi A3 2016"]},
+    {"id": 12, "navn": "Vannpumpe", "kategori": "Kjøling", "pris": 950, "antallPaLager": 9, "leverandor": "SKF", "passerTil": ["Volkswagen Golf 2017"]},
+    {"id": 13, "navn": "Støtdemper foran", "kategori": "Understell", "pris": 1400, "antallPaLager": 7, "leverandor": "Bilstein", "passerTil": ["BMW 3-serie 2018"]},
+    {"id": 14, "navn": "Støtdemper bak", "kategori": "Understell", "pris": 1300, "antallPaLager": 7, "leverandor": "Bilstein", "passerTil": ["BMW 3-serie 2018"]},
+    {"id": 15, "navn": "Fjær", "kategori": "Understell", "pris": 600, "antallPaLager": 14, "leverandor": "Lesjöfors", "passerTil": ["Volvo V70 2016"]},
+
+    {"id": 16, "navn": "Vindusviskere", "kategori": "Karosseri", "pris": 199, "antallPaLager": 50, "leverandor": "Bosch", "passerTil": ["Universal"]},
+    {"id": 17, "navn": "Frontlykt", "kategori": "Elektrisk", "pris": 1800, "antallPaLager": 4, "leverandor": "Hella", "passerTil": ["Audi A4 2017"]},
+    {"id": 18, "navn": "Baklykt", "kategori": "Elektrisk", "pris": 1500, "antallPaLager": 4, "leverandor": "Hella", "passerTil": ["Audi A4 2017"]},
+    {"id": 19, "navn": "Sikring", "kategori": "Elektrisk", "pris": 20, "antallPaLager": 200, "leverandor": "Bosch", "passerTil": ["Universal"]},
+    {"id": 20, "navn": "Relé", "kategori": "Elektrisk", "pris": 120, "antallPaLager": 30, "leverandor": "Bosch", "passerTil": ["Universal"]},
+
+    {"id": 21, "navn": "Kupefilter", "kategori": "Komfort", "pris": 250, "antallPaLager": 22, "leverandor": "Mann Filter", "passerTil": ["Volkswagen Golf 2018"]},
+    {"id": 22, "navn": "AC-kompressor", "kategori": "Kjøling", "pris": 4200, "antallPaLager": 3, "leverandor": "Denso", "passerTil": ["Toyota RAV4 2019"]},
+    {"id": 23, "navn": "Servopumpe", "kategori": "Styring", "pris": 2800, "antallPaLager": 5, "leverandor": "ZF", "passerTil": ["BMW 5-serie 2016"]},
+    {"id": 24, "navn": "Styrestag", "kategori": "Styring", "pris": 700, "antallPaLager": 11, "leverandor": "TRW", "passerTil": ["Ford Focus 2017"]},
+    {"id": 25, "navn": "Hjullager", "kategori": "Understell", "pris": 900, "antallPaLager": 13, "leverandor": "SKF", "passerTil": ["Volvo XC60 2018"]},
+
+    {"id": 26, "navn": "Eksospotte", "kategori": "Eksos", "pris": 1600, "antallPaLager": 6, "leverandor": "Walker", "passerTil": ["Toyota Avensis 2016"]},
+    {"id": 27, "navn": "Katalysator", "kategori": "Eksos", "pris": 5000, "antallPaLager": 2, "leverandor": "Bosal", "passerTil": ["Volkswagen Passat 2017"]},
+    {"id": 28, "navn": "Lambda-sonde", "kategori": "Eksos", "pris": 1100, "antallPaLager": 9, "leverandor": "Bosch", "passerTil": ["Audi A3 2016"]},
+    {"id": 29, "navn": "Turbo", "kategori": "Motor", "pris": 8500, "antallPaLager": 2, "leverandor": "Garrett", "passerTil": ["BMW 320d 2018"]},
+    {"id": 30, "navn": "Injektor", "kategori": "Motor", "pris": 2200, "antallPaLager": 6, "leverandor": "Bosch", "passerTil": ["Mercedes C220 2017"]},
+
+    {"id": 31, "navn": "Registerkjede", "kategori": "Motor", "pris": 1900, "antallPaLager": 4, "leverandor": "INA", "passerTil": ["BMW 1-serie 2016"]},
+    {"id": 32, "navn": "Toppakning", "kategori": "Motor", "pris": 600, "antallPaLager": 10, "leverandor": "Elring", "passerTil": ["Volkswagen Golf 2015"]},
+    {"id": 33, "navn": "Oljeplugg", "kategori": "Motor", "pris": 50, "antallPaLager": 100, "leverandor": "Febi", "passerTil": ["Universal"]},
+    {"id": 34, "navn": "Girspak", "kategori": "Interiør", "pris": 700, "antallPaLager": 5, "leverandor": "OEM", "passerTil": ["Audi A4 2016"]},
+    {"id": 35, "navn": "Setetrekk", "kategori": "Interiør", "pris": 1200, "antallPaLager": 8, "leverandor": "Sparco", "passerTil": ["Universal"]},
+
+    {"id": 36, "navn": "Speil", "kategori": "Karosseri", "pris": 900, "antallPaLager": 6, "leverandor": "TYC", "passerTil": ["Ford Fiesta 2018"]},
+    {"id": 37, "navn": "Dørhåndtak", "kategori": "Karosseri", "pris": 300, "antallPaLager": 14, "leverandor": "OEM", "passerTil": ["Volkswagen Golf 2017"]},
+    {"id": 38, "navn": "Panserlås", "kategori": "Karosseri", "pris": 250, "antallPaLager": 9, "leverandor": "OEM", "passerTil": ["Toyota Corolla 2016"]},
+    {"id": 39, "navn": "Gassdemper", "kategori": "Karosseri", "pris": 350, "antallPaLager": 12, "leverandor": "Stabilus", "passerTil": ["Volvo V60 2017"]},
+    {"id": 40, "navn": "Takstativ", "kategori": "Tilbehør", "pris": 1800, "antallPaLager": 3, "leverandor": "Thule", "passerTil": ["Universal"]},
+
+    {"id": 41, "navn": "Motorolje 5W-30", "kategori": "Forbruk", "pris": 499, "antallPaLager": 35, "leverandor": "Castrol", "passerTil": ["Universal"]},
+    {"id": 42, "navn": "Kjølevæske", "kategori": "Forbruk", "pris": 199, "antallPaLager": 28, "leverandor": "Prestone", "passerTil": ["Universal"]},
+    {"id": 43, "navn": "Bremsevæske", "kategori": "Forbruk", "pris": 149, "antallPaLager": 30, "leverandor": "ATE", "passerTil": ["Universal"]},
+    {"id": 44, "navn": "Spylervæske", "kategori": "Forbruk", "pris": 99, "antallPaLager": 45, "leverandor": "Sonax", "passerTil": ["Universal"]},
+    {"id": 45, "navn": "AdBlue", "kategori": "Forbruk", "pris": 249, "antallPaLager": 20, "leverandor": "Yara", "passerTil": ["Dieselbiler"]},
+
+    {"id": 46, "navn": "ABS-sensor", "kategori": "Elektrisk", "pris": 650, "antallPaLager": 10, "leverandor": "Bosch", "passerTil": ["BMW 3-serie 2017"]},
+    {"id": 47, "navn": "Startmotor", "kategori": "Elektrisk", "pris": 2200, "antallPaLager": 4, "leverandor": "Valeo", "passerTil": ["Audi A6 2016"]},
+    {"id": 48, "navn": "Dynamo", "kategori": "Elektrisk", "pris": 2500, "antallPaLager": 4, "leverandor": "Bosch", "passerTil": ["Volkswagen Passat 2018"]},
+    {"id": 49, "navn": "Kupévifte", "kategori": "Komfort", "pris": 1100, "antallPaLager": 7, "leverandor": "Valeo", "passerTil": ["Ford Focus 2017"]},
+    {"id": 50, "navn": "Parkeringssensor", "kategori": "Elektrisk", "pris": 500, "antallPaLager": 16, "leverandor": "Bosch", "passerTil": ["Universal"]}
+  ]
+}

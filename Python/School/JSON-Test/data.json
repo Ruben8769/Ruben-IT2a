@@ -1,0 +1,24 @@
+{
+    "brukere":[
+        {
+            "navn":"Ruben",
+            "alder":924,
+            "fag":["UTV", "DRI", "KON"]
+        },
+        {
+            "navn":"Bodhan",
+            "alder":273,
+            "fag":["UTV", "NOK", "KRL"]
+        },
+        {
+            "navn":"Georg",
+            "alder":562,
+            "fag":["UTV", "SAM", "NOK"]
+        },
+                {
+            "navn":"Sander",
+            "alder":14,
+            "fag":["UTV", "SAM", "NOK"]
+        }
+    ]
+}
