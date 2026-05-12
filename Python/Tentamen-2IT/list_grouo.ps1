@@ -1,0 +1,1 @@
+get-group-data":"Get-ADGroup -Filter * | Select-Object GroupCategory, GroupScope, Name | ConvertTo-Json

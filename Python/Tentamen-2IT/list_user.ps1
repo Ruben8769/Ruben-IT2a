@@ -1,0 +1,1 @@
+Get-ADUser -Filter * | Select-Object Name, GivenName, UserPrincipalName | ConvertTo-Json
