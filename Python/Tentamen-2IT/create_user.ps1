@@ -16,7 +16,7 @@ New-ADUser `
     -Surname $surname `
     -Name $name `
     -DisplayName $name `
-    -SamAccountName $samAccountName`
+    -SamAccountName $samAccountName `
     -Path $ouPath `
     -AccountPassword $password `
     -Enabled $true
