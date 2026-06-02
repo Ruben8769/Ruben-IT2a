@@ -12,8 +12,8 @@ worm_cl = (78, 210, 149)
 apple_cl = (206, 24, 24)
 
 # Cell size, amount
-CELL_SIZE = 7
-CELL_NUMBER = 128
+CELL_SIZE = 30
+CELL_NUMBER = 16
 WIDTH = CELL_SIZE * CELL_NUMBER
 HEIGHT = CELL_SIZE * CELL_NUMBER
 
