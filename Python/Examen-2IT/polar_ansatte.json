@@ -7,8 +7,8 @@
             "etternavn": "Hansen",
             "brukernavn": "mia.hansen",
             "stilling": "Prosjektkoordinator",
-            "avdeling": "Bodø",
-            "lokasjon": "Bodø",
+            "avdeling": "Bod\u00f8",
+            "lokasjon": "Bod\u00f8",
             "epost": "mia.hansen@polar.no",
             "telefon": "90010001",
             "gruppe": "GG_Bodo"
@@ -18,8 +18,8 @@
             "etternavn": "Nilsen",
             "brukernavn": "jonas.nilsen",
             "stilling": "Arrangementsansvarlig",
-            "avdeling": "Bodø",
-            "lokasjon": "Bodø",
+            "avdeling": "Bod\u00f8",
+            "lokasjon": "Bod\u00f8",
             "epost": "jonas.nilsen@polar.no",
             "telefon": "90010002",
             "gruppe": "GG_Bodo"
@@ -29,8 +29,8 @@
             "etternavn": "Olsen",
             "brukernavn": "sara.olsen",
             "stilling": "Markedsmedarbeider",
-            "avdeling": "Bodø",
-            "lokasjon": "Bodø",
+            "avdeling": "Bod\u00f8",
+            "lokasjon": "Bod\u00f8",
             "epost": "sara.olsen@polar.no",
             "telefon": "90010003",
             "gruppe": "GG_Bodo"
@@ -40,8 +40,8 @@
             "etternavn": "Karlsen",
             "brukernavn": "emil.karlsen",
             "stilling": "Teknisk ansvarlig",
-            "avdeling": "Bodø",
-            "lokasjon": "Bodø",
+            "avdeling": "Bod\u00f8",
+            "lokasjon": "Bod\u00f8",
             "epost": "emil.karlsen@polar.no",
             "telefon": "90010004",
             "gruppe": "GG_Bodo"
@@ -50,9 +50,9 @@
             "fornavn": "Nora",
             "etternavn": "Berg",
             "brukernavn": "nora.berg",
-            "stilling": "Økonomimedarbeider",
-            "avdeling": "Bodø",
-            "lokasjon": "Bodø",
+            "stilling": "\u00d8konomimedarbeider",
+            "avdeling": "Bod\u00f8",
+            "lokasjon": "Bod\u00f8",
             "epost": "nora.berg@polar.no",
             "telefon": "90010005",
             "gruppe": "GG_Bodo"
@@ -116,12 +116,21 @@
             "fornavn": "Henrik",
             "etternavn": "Solberg",
             "brukernavn": "henrik.solberg",
-            "stilling": "Direktør",
+            "stilling": "Direkt\u00f8r",
             "avdeling": "Ledelse",
-            "lokasjon": "Bodø",
+            "lokasjon": "Bod\u00f8",
             "epost": "henrik.solberg@polar.no",
             "telefon": "90030001",
             "gruppe": "GG_Direktor"
+        },
+        {
+            "fornavn": "Ruben",
+            "etternavn": "Hvidsten",
+            "brukernavn": "rubhvi",
+            "stilling": "Assistant",
+            "avdeling": "Arkitektur",
+            "epost": "rubhvi@kvn.no",
+            "gruppe": "GG_HJELP"
         }
     ]
 }

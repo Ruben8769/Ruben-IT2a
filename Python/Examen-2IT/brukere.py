@@ -7,6 +7,7 @@ ACTIVE_DIR = os.path.dirname(os.path.abspath(__file__))
 JSON_DATA = os.path.join(ACTIVE_DIR, "polar_ansatte.json")
 print("Files Loaded")
 
+# JSON Data
 def get_json_fixed():
     with open(JSON_DATA, "r", encoding="utf-8") as data:
         return json.load(data)
@@ -21,10 +22,14 @@ def legg_til_brukere_json(userdata):
     current_data = get_json_fixed()
     current_data["ansatte"].append(userdata)
 
-    with open(JSON_DATA, "w", encoding="utf-8") as u:
-        json.dump(current_data, u, indent=4)
+    with open(JSON_DATA, "w", encoding="utf-8") as data:
+        json.dump(current_data, data, indent=4)
 
+def oppdater_json(userdata):
+    with open(JSON_DATA, "w", encoding="utf-8") as data:
+        json.dump(userdata, data, indent=4)
 
+# Funksjoner
 def vis_meny():
     print("\n=== Brukeradministrasjon ===")
     print("1. Vis alle brukere")
@@ -80,20 +85,40 @@ def slett_bruker():
     brukernavn = input("Brukernavn som skal slettes: ")
 
     # Finn brukeren og slett den fra listen
+    ny_data = []
     data = get_json()
     for user in data:
-        if user["brukernavn"] == brukernavn:
-            pass
+        if user["brukernavn"] != brukernavn:
+            ny_data.append(user)
+    data = ny_data
+    legg_til_brukere_json(ny_data)
 
 
 def endre_epost():
     print("\n--- Endre e-post ---")
-
-    brukernavn = input("Brukernavn: ")
-    ny_epost = input("Ny e-post: ")
-
-    # Finn brukeren og endre e-post
-    print("Denne funksjonen er ikke ferdig.")
+    data = get_json_fixed()
+    brukernavn = input("Fornavn: ")
+    for user in data["ansatte"]:
+        if user["fornavn"] == brukernavn:
+            ny_epost = input("Ny e-post: ")
+            user["epost"] = ny_epost
+            bruker_funnet = True
+            break
+            # oppdatert_bruker = {
+            #     "fornavn": user["fornavn"],
+            #     "etternavn": user["etternavn"],
+            #     "brukernavn": user["brukernavn"],
+            #     "stilling": user["stilling"],
+            #     "avdeling": user["avdeling"],
+            #     "epost": ny_epost,
+            #     "gruppe": user["gruppe"]
+            # }
+            # legg_til_brukere_json(oppdatert_bruker)
+    if bruker_funnet:
+        oppdater_json(data)
+        print("E-post oppdatert")
+    else:
+        print("Fant ikke brukeren")
 
 
 while True:
@@ -107,6 +132,7 @@ while True:
         legg_til_bruker()
     elif valg == "3":
         slett_bruker()
+    elif valg == "4":
         endre_epost()
     elif valg == "5":
         print("Avslutter programmet.")
