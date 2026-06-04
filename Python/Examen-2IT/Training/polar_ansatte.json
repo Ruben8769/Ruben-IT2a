@@ -1,0 +1,127 @@
+{
+    "firma": "Polar Event Solutions AS",
+    "domene": "",
+    "ansatte": [
+        {
+            "fornavn": "Mia",
+            "etternavn": "Hansen",
+            "brukernavn": "mia.hansen",
+            "stilling": "Prosjektkoordinator",
+            "avdeling": "Bodø",
+            "lokasjon": "Bodø",
+            "epost": "mia.hansen@polar.no",
+            "telefon": "90010001",
+            "gruppe": "GG_Bodo"
+        },
+        {
+            "fornavn": "Jonas",
+            "etternavn": "Nilsen",
+            "brukernavn": "jonas.nilsen",
+            "stilling": "Arrangementsansvarlig",
+            "avdeling": "Bodø",
+            "lokasjon": "Bodø",
+            "epost": "jonas.nilsen@polar.no",
+            "telefon": "90010002",
+            "gruppe": "GG_Bodo"
+        },
+        {
+            "fornavn": "Sara",
+            "etternavn": "Olsen",
+            "brukernavn": "sara.olsen",
+            "stilling": "Markedsmedarbeider",
+            "avdeling": "Bodø",
+            "lokasjon": "Bodø",
+            "epost": "sara.olsen@polar.no",
+            "telefon": "90010003",
+            "gruppe": "GG_Bodo"
+        },
+        {
+            "fornavn": "Emil",
+            "etternavn": "Karlsen",
+            "brukernavn": "emil.karlsen",
+            "stilling": "Teknisk ansvarlig",
+            "avdeling": "Bodø",
+            "lokasjon": "Bodø",
+            "epost": "emil.karlsen@polar.no",
+            "telefon": "90010004",
+            "gruppe": "GG_Bodo"
+        },
+        {
+            "fornavn": "Nora",
+            "etternavn": "Berg",
+            "brukernavn": "nora.berg",
+            "stilling": "Økonomimedarbeider",
+            "avdeling": "Bodø",
+            "lokasjon": "Bodø",
+            "epost": "nora.berg@polar.no",
+            "telefon": "90010005",
+            "gruppe": "GG_Bodo"
+        },
+        {
+            "fornavn": "Thea",
+            "etternavn": "Johansen",
+            "brukernavn": "thea.johansen",
+            "stilling": "Prosjektleder",
+            "avdeling": "Nesna",
+            "lokasjon": "Nesna",
+            "epost": "thea.johansen@polar.no",
+            "telefon": "90020001",
+            "gruppe": "GG_Nesna"
+        },
+        {
+            "fornavn": "Oliver",
+            "etternavn": "Pedersen",
+            "brukernavn": "oliver.pedersen",
+            "stilling": "Lydtekniker",
+            "avdeling": "Nesna",
+            "lokasjon": "Nesna",
+            "epost": "oliver.pedersen@polar.no",
+            "telefon": "90020002",
+            "gruppe": "GG_Nesna"
+        },
+        {
+            "fornavn": "Ida",
+            "etternavn": "Larsen",
+            "brukernavn": "ida.larsen",
+            "stilling": "Kundebehandler",
+            "avdeling": "Nesna",
+            "lokasjon": "Nesna",
+            "epost": "ida.larsen@polar.no",
+            "telefon": "90020003",
+            "gruppe": "GG_Nesna"
+        },
+        {
+            "fornavn": "Magnus",
+            "etternavn": "Andreassen",
+            "brukernavn": "magnus.andreassen",
+            "stilling": "Scenetekniker",
+            "avdeling": "Nesna",
+            "lokasjon": "Nesna",
+            "epost": "magnus.andreassen@polar.no",
+            "telefon": "90020004",
+            "gruppe": "GG_Nesna"
+        },
+        {
+            "fornavn": "Amalie",
+            "etternavn": "Moen",
+            "brukernavn": "amalie.moen",
+            "stilling": "Markedsmedarbeider",
+            "avdeling": "Nesna",
+            "lokasjon": "Nesna",
+            "epost": "amalie.moen@polar.no",
+            "telefon": "90020005",
+            "gruppe": "GG_Nesna"
+        },
+        {
+            "fornavn": "Henrik",
+            "etternavn": "Solberg",
+            "brukernavn": "henrik.solberg",
+            "stilling": "Direktør",
+            "avdeling": "Ledelse",
+            "lokasjon": "Bodø",
+            "epost": "henrik.solberg@polar.no",
+            "telefon": "90030001",
+            "gruppe": "GG_Direktor"
+        }
+    ]
+}
