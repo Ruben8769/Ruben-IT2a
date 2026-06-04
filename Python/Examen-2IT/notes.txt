@@ -1,0 +1,70 @@
+PS C:\Users\Administrator\Documents\Examen-2IT> & C:/Users/Administrator/AppData/Local/Programs/Python/Python314/python.exe c:/Users/Administrator/Documents/Examen-2IT/user_import.py
+Skriv brukere i AD y eller n:                                                                                                                            Velg: y                                                                                                                                                  Legger til brukere                                                                                                                                       OU=PES,OU=Bodo                                                                                                                                           
+New-ADUser : Directory object not found                                                                                                                  At C:\Users\Administrator\Documents\Examen-2IT\newUser.ps1:16 char:1                                                                                     + New-ADUser `                                                                                                                                           + ~~~~~~~~~~~~                                                                                                                                           
+    + CategoryInfo          : ObjectNotFound: (CN=Mia Hansen,O...=polar,DC=local:String) [New-ADUser], ADIdentityNotFoundException                       
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Microsoft.ActiveDirectory.Manageme 
+   nt.Commands.NewADUser
+
+OU=PES,OU=Bodo
+New-ADUser : Directory object not found                                                                                                                  At C:\Users\Administrator\Documents\Examen-2IT\newUser.ps1:16 char:1                                                                                     + New-ADUser `                                                                                                                                           + ~~~~~~~~~~~~                                                                                                                                           
+    + CategoryInfo          : ObjectNotFound: (CN=Jonas Nilsen...=polar,DC=local:String) [New-ADUser], ADIdentityNotFoundException                       
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Microsoft.ActiveDirectory.Manageme  
+   nt.Commands.NewADUser
+
+OU=PES,OU=Bodo
+New-ADUser : Directory object not found                                                                                                                  At C:\Users\Administrator\Documents\Examen-2IT\newUser.ps1:16 char:1                                                                                     + New-ADUser `                                                                                                                                           + ~~~~~~~~~~~~                                                                                                                                           
+    + CategoryInfo          : ObjectNotFound: (CN=Sara Olsen,O...=polar,DC=local:String) [New-ADUser], ADIdentityNotFoundException                       
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Microsoft.ActiveDirectory.Manageme  
+   nt.Commands.NewADUser
+
+OU=PES,OU=Bodo
+New-ADUser : Directory object not found                                                                                                                  At C:\Users\Administrator\Documents\Examen-2IT\newUser.ps1:16 char:1                                                                                     + New-ADUser `                                                                                                                                           + ~~~~~~~~~~~~                                                                                                                                           
+    + CategoryInfo          : ObjectNotFound: (CN=Emil Karlsen...=polar,DC=local:String) [New-ADUser], ADIdentityNotFoundException                       
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Microsoft.ActiveDirectory.Manageme  
+   nt.Commands.NewADUser
+
+OU=PES,OU=Bodo
+New-ADUser : Directory object not found                                                                                                                  At C:\Users\Administrator\Documents\Examen-2IT\newUser.ps1:16 char:1                                                                                     + New-ADUser `                                                                                                                                           + ~~~~~~~~~~~~                                                                                                                                           
+    + CategoryInfo          : ObjectNotFound: (CN=Nora Berg,OU...=polar,DC=local:String) [New-ADUser], ADIdentityNotFoundException                       
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Microsoft.ActiveDirectory.Manageme  
+   nt.Commands.NewADUser
+
+OU=PES,OU=Nesna
+New-ADUser : Directory object not found                                                                                                                  At C:\Users\Administrator\Documents\Examen-2IT\newUser.ps1:16 char:1                                                                                     + New-ADUser `                                                                                                                                           + ~~~~~~~~~~~~                                                                                                                                           
+    + CategoryInfo          : ObjectNotFound: (CN=Thea Johanse...=polar,DC=local:String) [New-ADUser], ADIdentityNotFoundException                       
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Microsoft.ActiveDirectory.Manageme  
+   nt.Commands.NewADUser
+
+OU=PES,OU=Nesna
+New-ADUser : Directory object not found                                                                                                                  At C:\Users\Administrator\Documents\Examen-2IT\newUser.ps1:16 char:1                                                                                     + New-ADUser `                                                                                                                                           + ~~~~~~~~~~~~                                                                                                                                           
+    + CategoryInfo          : ObjectNotFound: (CN=Oliver Peder...=polar,DC=local:String) [New-ADUser], ADIdentityNotFoundException                       
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Microsoft.ActiveDirectory.Manageme  
+   nt.Commands.NewADUser
+
+OU=PES,OU=Nesna
+New-ADUser : Directory object not found                                                                                                                  At C:\Users\Administrator\Documents\Examen-2IT\newUser.ps1:16 char:1                                                                                     + New-ADUser `                                                                                                                                           + ~~~~~~~~~~~~                                                                                                                                           
+    + CategoryInfo          : ObjectNotFound: (CN=Ida Larsen,O...=polar,DC=local:String) [New-ADUser], ADIdentityNotFoundException                       
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Microsoft.ActiveDirectory.Manageme  
+
+OU=PES,OU=Nesna
+New-ADUser : Directory object not found                                                                                                                  At C:\Users\Administrator\Documents\Examen-2IT\newUser.ps1:16 char:1                                                                                     + New-ADUser `                                                                                                                                           + ~~~~~~~~~~~~                                                                                                                                               + CategoryInfo          : ObjectNotFound: (CN=Magnus Andre...=polar,DC=local:String) [New-ADUser], ADIdentityNotFoundException                       
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Microsoft.ActiveDirectory.Manageme  
+   nt.Commands.NewADUser
+
+OU=PES,OU=Nesna
+New-ADUser : Directory object not found
+At C:\Users\Administrator\Documents\Examen-2IT\newUser.ps1:16 char:1
++ New-ADUser `
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (CN=Amalie Moen,...=polar,DC=local:String) [New-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Microsoft.ActiveDirectory.Manageme 
+   nt.Commands.NewADUser
+ 
+OU=PES,OU=Bodo
+New-ADUser : Directory object not found
+At C:\Users\Administrator\Documents\Examen-2IT\newUser.ps1:16 char:1
++ New-ADUser `
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (CN=Henrik Solbe...=polar,DC=local:String) [New-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Microsoft.ActiveDirectory.Manageme  
+   nt.Commands.NewADUser

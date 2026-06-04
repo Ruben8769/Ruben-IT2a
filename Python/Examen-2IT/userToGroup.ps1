@@ -1,9 +1,9 @@
 param(
-    [string]$indentity
+    [string]$indentity,
     [string]$userPrincipalName
 )
 
 Add-ADGroupMember `
-    -Indentity $indentity
-    -Members $userPrincipalName
-    -Confirm $false
+    -Indentity $indentity `
+    -Members $userPrincipalName `
+    -Confirm:$false

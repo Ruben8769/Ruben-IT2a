@@ -7,6 +7,7 @@ import subprocess
 ACTIVE_DIR = os.path.dirname(os.path.abspath(__file__)) # Får Active Directory som koden kjører i
 JSON_FILE = os.path.join(ACTIVE_DIR, "polar_ansatte.json") # Kombinerer AD med local fil lokasjon
 NEW_USER = os.path.join(ACTIVE_DIR, "newUser.ps1") # Kombinerer AD med local fil lokasjon
+ADD_USER_TO_GROUP = os.path.join(ACTIVE_DIR, "userToGroup.ps1")
 
 # Funksjon for og få JSON data
 def call_json_list():
@@ -34,7 +35,7 @@ def add_user_to_group(userPrincipalName, indentity):
     subprocess.run([ # Kjører PowerShell script
         "powershell",
         "-ExecutionPolicy", "Bypass",
-        "-File", NEW_USER,
+        "-File", ADD_USER_TO_GROUP,
         "-userPrincipalName", userPrincipalName,
         "-indentity", indentity
     ])
@@ -56,9 +57,9 @@ def add_users():
         # Finner ut hvor den ansatte er
         ouPath = "Null"
         if user["lokasjon"] == "Nesna":
-            ouPath = "OU=PES,OU=Nesna"
+            ouPath = "OU=Nesna,OU=PES,DC=polar,DC=local"
         else:
-            ouPath = "OU=PES,OU=Bodo"
+            ouPath = "OU=Bodo,OU=PES,DC=polar,DC=local"
         print(ouPath)
         # Kaller på funksjon som legger til bruker i AD
         fornavn = user["fornavn"]
@@ -68,6 +69,8 @@ def add_users():
         stilling = user["stilling"]
         avdeling = user["avdeling"]
         create_user(fornavn, etternavn, completed_username, ouPath, epost, telefon, stilling, avdeling)
+        gruppe = user["gruppe"]
+        add_user_to_group(completed_username, gruppe)
 
 # En løke som kjører koden
 while True:

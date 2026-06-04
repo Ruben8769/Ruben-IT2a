@@ -9,8 +9,7 @@ param(
     [string]$department
 )
 
-$domain = (Get-ADDomain).DistinguishedName
-$ouPath = "$ou,$domain"
+$ouPath = $ou
 $password = ConvertTo-SecureString "qwerty123!" -AsPlainText -Force
 
 New-ADUser `
